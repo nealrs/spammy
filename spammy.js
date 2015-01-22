@@ -8,7 +8,7 @@ usage:
 	spammy("Check it out bruh"); // true because of 'check'
 	spammy("Can you take a look at this?"); // false
 	spammy("Win a million dollars"); // true
-	spamm("I love you"); // false
+	spammy("I love you"); // false
 
 ********/
 
