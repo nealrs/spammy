@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Use spammy to check your subject lines for common spam triggers.">
+    <meta name="author" content="Neal Shyam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is your subject line spammy?</title>
+    <style>
+      body {
+        font-family: Helvetica, Arial;
+        background-color: #ECF0F1;
+        color: #2C3E50;
+      }
+
+      body a:link,
+      body a:visited {
+        color: #2980B9;
+      }
+      body a:hover {
+        color:#E74C3C;
+      }
+
+      #title {
+        margin-top: 192px;
+        text-align: center;
+        font-size: 25px;
+      }
+
+      #main_input {
+        margin-top: 20px;
+        font-size: 17px;
+        display: block;
+        border: 1px solid #d9d9d9;
+        border-radius: 3px;
+        box-shadow: 0 1px 6px rgba(217, 217, 217, 0.4);
+        padding: 10px;
+        font-family: helvetica, arial;
+        width: 570px;
+      }
+
+      #container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 572px;
+      }
+
+      #input_container {
+        width: 570px;
+        position: relative;
+      }
+
+      .hide{display:none;}
+
+      .g{background-color:#34AEDB; padding:6px 16px; border-radius:6px;}
+      .r{background-color:#E74C3C; padding:6px 16px; border-radius:6px;}
+
+    </style>
+  </head>
+  <body>
+    <div id="title">
+      Is your subject line spammy? <span id="spammy" class="hide r">YES</span><span id="nspammy" class="hide g">NO</span>
+    </div>
+    <div id="container">
+      <div id="input_container">
+        <input type="text" id="main_input" placeholder="Enter your subject line here"/>
+      </div>
+
+      <div style="text-align:center;">
+        <p><a href="http://nealshyam.com">Neal Shyam</a> made this with <a href="https://github.com/nealrs/spammy">spammy</a>.</p>
+
+        <p>Spam from <a href="http://blog.hubspot.com/blog/tabid/6307/bid/30684/The-Ultimate-List-of-Email-SPAM-Trigger-Words.aspx">Hubspot</a> &middot; Design inspired by <a href="http://titlecapitalization.com/">TitleCapitalization</a></p>
+      </div>
+
+    </div>
+  </body>
+  <script type="text/javascript" src="spammy.js"></script>
+  <script>
+    inp = document.getElementById('main_input');
+    var checkText = function(x) {
+      var i = x.target;
+
+      if ( i.value.length == 0 ){ hideFlags();}
+      else if ( spammy(i.value) && i.value.length > 0) { sFlag(); }
+      else { nsFlag(); }
+    };
+
+    var sFlag = function() {
+      s = document.getElementById('spammy');
+      ns = document.getElementById('nspammy');
+      s.classList.remove('hide');
+      ns.classList.add('hide');
+    };
+
+    var nsFlag = function() {
+      s = document.getElementById('spammy');
+      ns = document.getElementById('nspammy');
+      ns.classList.remove('hide');
+      s.classList.add('hide');
+    };
+
+    var hideFlags = function() {
+      s = document.getElementById('spammy');
+      ns = document.getElementById('nspammy');
+      ns.classList.add('hide');
+      s.classList.add('hide');
+    };
+
+    inp.onkeyup = checkText;
+    inp.onkeydown = hideFlags();
+  </script>
+</html>

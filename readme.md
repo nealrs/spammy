@@ -1,10 +1,16 @@
 # spammy
 
-I write 3-4 email newsletters every week, so deliverability is super important to me. To that end, I need to make sure my subject lines don't set off any ISP / spam filter alarms.  
+I write 3-4 email newsletters every week, so deliverability is super important to me. To that end, I need to make sure my subject lines don't set off any ISP / spam filter alarms.
 
-Pass spammy a string and it'll tell you if it contains any words or phrases commonly associated with email spam. If it returns false, you're good. If it returns true, revise your copy.
+**Demo**
 
-I pulled the triggers from this HubSpot blog post: http://blog.hubspot.com/blog/tabid/6307/bid/30684/The-Ultimate-List-of-Email-SPAM-Trigger-Words.aspx
+The [live demo](nealrs.github.io/spammy/) is _heavily_ inspired by [titlecapitalization.com](http://titlecapitalization.com). Try it out, share it with your friends. Reach more users.
+
+**Library**
+
+spammy accepts strings and will return `true` if it contains any words or phrases commonly associated with email spam. If it returns `false`, you're good.
+
+I pulled the spam triggers from this [HubSpot blog post]( http://blog.hubspot.com/blog/tabid/6307/bid/30684/The-Ultimate-List-of-Email-SPAM-Trigger-Words.aspx).
 
 **Usage**
 
