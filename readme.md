@@ -4,7 +4,7 @@ I write 3-4 email newsletters every week, so deliverability is super important t
 
 **Demo**
 
-The [live demo](nealrs.github.io/spammy/) is _heavily_ inspired by [titlecapitalization.com](http://titlecapitalization.com). Try it out, share it with your friends. Reach more users.
+The [live demo](http://nealrs.github.io/spammy/) is _heavily_ inspired by [titlecapitalization.com](http://titlecapitalization.com). Try it out, share it with your friends. Reach more users.
 
 **Library**
 
