@@ -81,7 +81,7 @@
       var i = x.target;
 
       if ( i.value.length == 0 ){ hideFlags();}
-      else if ( spammy(i.value) && i.value.length > 0) { sFlag(); }
+      else if ( spammy(" "+ i.value+" ") && i.value.length > 0) { sFlag(); }
       else { nsFlag(); }
     };
 
